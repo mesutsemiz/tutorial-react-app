@@ -1,0 +1,20 @@
+import React, { FunctionComponent } from 'react'
+
+interface ILoadingProps{
+    loading: boolean;
+}
+
+const Loading:FunctionComponent<ILoadingProps>=(props)=>{
+    const{loading} = props
+
+    if (loading) {
+        
+        return <>Loading....</>
+    }else{
+        return <>{props.children}</>
+
+    }
+
+}
+
+export default Loading;
